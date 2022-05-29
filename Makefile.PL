@@ -18,8 +18,6 @@ name 'Data-Commons-Image';
 perl_version 5.008;
 readme_from 'Image.pm';
 recursive_author_tests('xt');
-requires 'English' => 0;
-requires 'Error::Pure' => 0;
 requires 'Mo' => 0;
 requires 'Mo::utils' => 0.05;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Data-Commons-Image/issues';
