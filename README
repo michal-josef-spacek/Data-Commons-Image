@@ -1,0 +1,78 @@
+NAME
+    Data::Commons::Image - Data object for Wikimedia Commons image.
+
+SYNOPSIS
+     use Data::Commons::Image;
+
+     my $obj = Data::Commons::Image->new(%params);
+     my $comment = $obj->comment;
+     my $image = $obj->image;
+
+METHODS
+  "new"
+     my $obj = Data::Commons::image->new(%params);
+
+    Constructor.
+
+    Returns instance of object.
+
+    *       "comment"
+
+            Image comment. It's optional. Default value is undef.
+
+    *       "image"
+
+            Image name in Wikimedia Commons. It's required.
+
+  "comment"
+     my $comment = $obj->comment;
+
+    Get image comment.
+
+    Returns string.
+
+  "image"
+     my $image = $obj->image;
+
+    Get image name in Wikimedia Commons.
+
+    Returns string.
+
+EXAMPLE
+     use strict;
+     use warnings;
+
+     use Data::Commons::Image;
+
+     my $obj = Data::Commons::Image->new(
+             'comment' => 'Michal from Czechia',
+             'image' => 'Michal_from_Czechia.jpg',
+     );
+
+     # Print out.
+     print 'Comment: '.$obj->comment."\n";
+     print 'Image: '.$obj->image."\n";
+
+     # Output:
+     # Comment: Michal from Czechia
+     # Image: Michal_from_Czechia.jpg
+
+DEPENDENCIES
+    Mo, Mo::utils.
+
+REPOSITORY
+    <https://github.com/michal-josef-spacek/Data-Commons-Image>
+
+AUTHOR
+    Michal Josef Špaček <mailto:skim@cpan.org>
+
+    <http://skim.cz>
+
+LICENSE AND COPYRIGHT
+    © 2022 Michal Josef Špaček
+
+    BSD 2-Clause License
+
+VERSION
+    0.01
+
