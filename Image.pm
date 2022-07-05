@@ -54,7 +54,7 @@ Data::Commons::Image - Data object for Wikimedia Commons image.
 
 =head2 C<new>
 
- my $obj = Data::Commons::image->new(%params);
+ my $obj = Data::Commons::Image->new(%params);
 
 Constructor.
 

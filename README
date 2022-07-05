@@ -10,7 +10,7 @@ SYNOPSIS
 
 METHODS
   "new"
-     my $obj = Data::Commons::image->new(%params);
+     my $obj = Data::Commons::Image->new(%params);
 
     Constructor.
 
