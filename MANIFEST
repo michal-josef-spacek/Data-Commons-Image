@@ -1,6 +1,5 @@
 Changes
 CONCEPT
-examples/ex1.pl
 Image.pm
 inc/Module/Install.pm
 inc/Module/Install/AuthorRequires.pm
