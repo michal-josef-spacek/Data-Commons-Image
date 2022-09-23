@@ -4,11 +4,15 @@ use strict;
 use warnings;
 
 use Mo qw(build is);
-use Mo::utils qw(check_length check_required);
+use Mo::utils qw(check_length check_number check_required);
 
 our $VERSION = 0.01;
 
 has comment => (
+	is => 'ro',
+);
+
+has id => (
 	is => 'ro',
 );
 
@@ -22,6 +26,9 @@ sub BUILD {
 
 	# Check comment.
 	check_length($self, 'comment', 1000);
+
+	# Check id.
+	check_number($self, 'id');
 
 	# Check image.
 	check_required($self, 'image');
@@ -48,6 +55,7 @@ Data::Commons::Image - Data object for Wikimedia Commons image.
 
  my $obj = Data::Commons::Image->new(%params);
  my $comment = $obj->comment;
+ my $id = $obj->id;
  my $image = $obj->image;
 
 =head1 METHODS
@@ -68,6 +76,12 @@ Image comment.
 It's optional.
 Default value is undef.
 
+=item * C<id>
+
+Image id.
+It's optional.
+Default value is undef.
+
 =item * C<image>
 
 Image name in Wikimedia Commons.
@@ -82,6 +96,14 @@ It's required.
 Get image comment.
 
 Returns string.
+
+=head2 C<id>
+
+ my $id = $obj->id;
+
+Get image id.
+
+Returns number.
 
 =head2 C<image>
 
