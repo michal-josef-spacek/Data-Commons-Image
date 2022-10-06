@@ -6,6 +6,7 @@ SYNOPSIS
 
      my $obj = Data::Commons::Image->new(%params);
      my $comment = $obj->comment;
+     my $id = $obj->id;
      my $image = $obj->image;
 
 METHODS
@@ -20,6 +21,10 @@ METHODS
 
             Image comment. It's optional. Default value is undef.
 
+    *       "id"
+
+            Image id. It's optional. Default value is undef.
+
     *       "image"
 
             Image name in Wikimedia Commons. It's required.
@@ -30,6 +35,13 @@ METHODS
     Get image comment.
 
     Returns string.
+
+  "id"
+     my $id = $obj->id;
+
+    Get image id.
+
+    Returns number.
 
   "image"
      my $image = $obj->image;
