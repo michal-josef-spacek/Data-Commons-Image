@@ -2,8 +2,10 @@ TODO
 ====
 1. More data object for Wikimedia Commons or only image?
 2. Inherit some common data object and in this focus to Wikimedia Commons.
-3. Inherit common Data::Image and add things related to Wikimedia Commons.
+Add some other Wikimedia Commons information like uploader.
 4.
 
 Applied
 =======
+3. Inherit common Data::Image and add things related to Wikimedia Commons.
+OK [20221006] skim

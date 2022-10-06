@@ -20,5 +20,14 @@ META.yml
 README
 t/Data-Commons-Image/01-use.t
 t/Data-Commons-Image/02-version.t
+t/Data-Commons-Image/03-new.t
+t/Data-Commons-Image/04-author.t
+t/Data-Commons-Image/05-comment.t
+t/Data-Commons-Image/06-height.t
+t/Data-Commons-Image/07-id.t
+t/Data-Commons-Image/08-size.t
+t/Data-Commons-Image/09-url.t
+t/Data-Commons-Image/10-url_cb.t
+t/Data-Commons-Image/11-width.t
 xt/Data-Commons-Image/01-pod_coverage.t
 xt/Data-Commons-Image/02-pod.t

@@ -4,35 +4,22 @@ use strict;
 use warnings;
 
 use Mo qw(build is);
-use Mo::utils qw(check_length check_number check_required);
+use Mo::utils qw(check_length check_required);
+
+extends 'Data::Image';
 
 our $VERSION = 0.01;
 
-has comment => (
-	is => 'ro',
-);
-
-has id => (
-	is => 'ro',
-);
-
-# Image from Commons.
-has image => (
+has commons_name => (
 	is => 'ro',
 );
 
 sub BUILD {
 	my $self = shift;
 
-	# Check comment.
-	check_length($self, 'comment', 1000);
-
-	# Check id.
-	check_number($self, 'id');
-
-	# Check image.
-	check_required($self, 'image');
-	check_length($self, 'image', 255);
+	# Check commons_name.
+	check_required($self, 'commons_name');
+	check_length($self, 'commons_name', 255);
 
 	return;
 }
@@ -54,9 +41,19 @@ Data::Commons::Image - Data object for Wikimedia Commons image.
  use Data::Commons::Image;
 
  my $obj = Data::Commons::Image->new(%params);
+ my $author = $obj->author;
  my $comment = $obj->comment;
+ my $commons_name = $obj->commons_name;
+ my $height = $obj->height;
  my $id = $obj->id;
- my $image = $obj->image;
+ my $size = $obj->size;
+ my $url = $obj->url;
+ my $url_cb = $obj->url_cb;
+ my $width = $obj->width;
+
+=head1 DESCRIPTION
+
+Data object for Wikimedia Commons image. Inherits L<Data::Image> common object.
 
 =head1 METHODS
 
@@ -70,9 +67,26 @@ Returns instance of object.
 
 =over 8
 
+=item * C<author>
+
+Image author.
+It's optional.
+Default value is undef.
+
 =item * C<comment>
 
 Image comment.
+It's optional.
+Default value is undef.
+
+=item * C<commons_name>
+
+Image name in Wikimedia Commons.
+It's required.
+
+=item * C<height>
+
+Image height.
 It's optional.
 Default value is undef.
 
@@ -82,12 +96,39 @@ Image id.
 It's optional.
 Default value is undef.
 
-=item * C<image>
+=item * C<size>
 
-Image name in Wikimedia Commons.
-It's required.
+Image size.
+It's optional.
+Default value is undef.
+
+=item * C<url>
+
+URL of image.
+It's optional.
+Default value is undef.
+
+=item * C<url_cb>
+
+URL callback. To get URL from code.
+It's optional.
+Default value is undef.
+
+=item * C<width>
+
+Image width.
+It's optional.
+Default value is undef.
 
 =back
+
+=head2 C<author>
+
+ my $author = $obj->author;
+
+Get image author.
+
+Returns string.
 
 =head2 C<comment>
 
@@ -97,6 +138,22 @@ Get image comment.
 
 Returns string.
 
+=head2 C<commons_name>
+
+ my $commons_name = $obj->commons_name;
+
+Get image name in Wikimedia Commons.
+
+Returns string.
+
+=head2 C<height>
+
+ my $height = $obj->height;
+
+Get image height.
+
+Returns number.
+
 =head2 C<id>
 
  my $id = $obj->id;
@@ -105,13 +162,37 @@ Get image id.
 
 Returns number.
 
-=head2 C<image>
+=head2 C<size>
 
- my $image = $obj->image;
+ my $size = $obj->size;
 
-Get image name in Wikimedia Commons.
+Get image size.
+
+Returns number.
+
+=head2 C<url>
+
+ my $url = $obj->url;
+
+Get URL of image.
 
 Returns string.
+
+=head2 C<url_cb>
+
+ my $url_cb = $obj->url_cb;
+
+Get URL callback.
+
+Returns code.
+
+=head2 C<width>
+
+ my $width = $obj->width;
+
+Get image width.
+
+Returns number.
 
 =head1 EXAMPLE
 
@@ -123,20 +204,36 @@ Returns string.
  use Data::Commons::Image;
 
  my $obj = Data::Commons::Image->new(
+         'author' => 'Zuzana Zonova',
          'comment' => 'Michal from Czechia',
-         'image' => 'Michal_from_Czechia.jpg',
+         'commons_name' => 'Michal_from_Czechia.jpg',
+         'height' => 2730,
+         'size' => 1040304,
+         'url' => 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Michal_from_Czechia.jpg',
+         'width' => 4096,
  );
 
  # Print out.
+ print 'Author: '.$obj->author."\n";
  print 'Comment: '.$obj->comment."\n";
- print 'Image: '.$obj->image."\n";
+ print 'Wikimedia Commons name: '.$obj->commons_name."\n";
+ print 'Height: '.$obj->height."\n";
+ print 'Size: '.$obj->size."\n";
+ print 'URL: '.$obj->url."\n";
+ print 'Width: '.$obj->width."\n";
 
  # Output:
+ # Author: Zuzana Zonova
  # Comment: Michal from Czechia
- # Image: Michal_from_Czechia.jpg
+ # Wikimedia Commons name: Michal_from_Czechia.jpg
+ # Height: 2730
+ # Size: 1040304
+ # URL: https://upload.wikimedia.org/wikipedia/commons/a/a4/Michal_from_Czechia.jpg
+ # Width: 4096
 
 =head1 DEPENDENCIES
 
+L<Data::Image>,
 L<Mo>,
 L<Mo::utils>.
 

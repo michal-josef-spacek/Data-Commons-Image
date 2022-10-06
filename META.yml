@@ -25,6 +25,7 @@ no_index:
     - t
     - xt
 requires:
+  Data::Image: 0
   Mo: 0
   Mo::utils: 0.05
   perl: 5.8.0
