@@ -24,6 +24,7 @@ requires 'Mo::utils' => 0.05;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Data-Commons-Image/issues';
 resources 'homepage' => 'https://github.com/michal-josef-spacek/Data-Commons-Image';
 resources 'repository' => 'git://github.com/michal-josef-spacek/Data-Commong-Image';
+test_requires 'DateTime' => 0;
 test_requires 'Error::Pure' => 0;
 test_requires 'File::Object' => 0;
 test_requires 'Test::More' => 0;

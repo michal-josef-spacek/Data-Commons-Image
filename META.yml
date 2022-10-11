@@ -3,6 +3,7 @@ abstract: 'Data object for Wikimedia Commons image.'
 author:
   - 'Michal Josef Spacek <skim@cpan.org>'
 build_requires:
+  DateTime: 0
   Error::Pure: 0
   ExtUtils::MakeMaker: 6.59
   File::Object: 0
