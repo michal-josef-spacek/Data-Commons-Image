@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Mo qw(build is);
-use Mo::utils qw(check_length check_required);
+use Mo::utils qw(check_isa check_length check_required);
 
 extends 'Data::Image';
 
@@ -14,12 +14,26 @@ has commons_name => (
 	is => 'ro',
 );
 
+has dt_created => (
+	is => 'ro',
+);
+
+has dt_uploaded => (
+	is => 'ro',
+);
+
 sub BUILD {
 	my $self = shift;
 
 	# Check commons_name.
 	check_required($self, 'commons_name');
 	check_length($self, 'commons_name', 255);
+
+	# Check date created.
+	check_isa($self, 'dt_created', 'DateTime');
+
+	# Check date uploaded.
+	check_isa($self, 'dt_uploaded', 'DateTime');
 
 	return;
 }
@@ -44,6 +58,8 @@ Data::Commons::Image - Data object for Wikimedia Commons image.
  my $author = $obj->author;
  my $comment = $obj->comment;
  my $commons_name = $obj->commons_name;
+ my $dt_created = $obj->dt_created;
+ my $dt_uploaded = $obj->dt_uploaded;
  my $height = $obj->height;
  my $id = $obj->id;
  my $size = $obj->size;
@@ -83,6 +99,18 @@ Default value is undef.
 
 Image name in Wikimedia Commons.
 It's required.
+
+=item * C<dt_created>
+
+Date and time the image was created.
+Value must be L<DateTime> object.
+It's optional.
+
+=item * C<dt_uploaded>
+
+Date and time the image was uploaded to Wikimedia Commons.
+Value must be L<DateTime> object.
+It's optional.
 
 =item * C<height>
 
@@ -146,6 +174,22 @@ Get image name in Wikimedia Commons.
 
 Returns string.
 
+=head2 C<dt_created>
+
+ my $dt_created = $obj->dt_created;
+
+Get date and time the image was created.
+
+Returns L<DateTime> object.
+
+=head2 C<dt_uploaded>
+
+ my $dt_uploaded = $obj->dt_uploaded;
+
+Get date and time the image was uploaded to Wikimedia Commons.
+
+Returns L<DateTime> object.
+
 =head2 C<height>
 
  my $height = $obj->height;
@@ -202,11 +246,22 @@ Returns number.
  use warnings;
 
  use Data::Commons::Image;
+ use DateTime;
 
  my $obj = Data::Commons::Image->new(
          'author' => 'Zuzana Zonova',
          'comment' => 'Michal from Czechia',
          'commons_name' => 'Michal_from_Czechia.jpg',
+         'dt_created' => DateTime->new(
+                 'day' => 1,
+                 'month' => 1,
+                 'year' => 2022,
+         ),
+         'dt_uploaded' => DateTime->new(
+                 'day' => 14,
+                 'month' => 7,
+                 'year' => 2022,
+         ),
          'height' => 2730,
          'size' => 1040304,
          'url' => 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Michal_from_Czechia.jpg',
@@ -221,6 +276,8 @@ Returns number.
  print 'Size: '.$obj->size."\n";
  print 'URL: '.$obj->url."\n";
  print 'Width: '.$obj->width."\n";
+ print 'Date and time the photo was created: '.$obj->dt_created."\n";
+ print 'Date and time the photo was uploaded: '.$obj->dt_uploaded."\n";
 
  # Output:
  # Author: Zuzana Zonova
@@ -230,6 +287,8 @@ Returns number.
  # Size: 1040304
  # URL: https://upload.wikimedia.org/wikipedia/commons/a/a4/Michal_from_Czechia.jpg
  # Width: 4096
+ # Date and time the photo was created: 2022-01-01T00:00:00
+ # Date and time the photo was uploaded: 2022-07-14T00:00:00
 
 =head1 DEPENDENCIES
 
