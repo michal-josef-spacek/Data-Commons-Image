@@ -1,0 +1,65 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.87.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: RIPEMD160
+
+SHA256 0d629aa40188cc0b70877b83bd3b0ec273051202000848d644bbd3a5811de099 CONCEPT
+SHA256 f15f348603011a5b3796fa0820b4c8eadba1473ac3fc8f171c67d96b40c4fd17 Changes
+SHA256 91c522b41d2a83e85a63e7720a7c3441219d40b0190e42f230c9b1ec50571024 Image.pm
+SHA256 6a01c8ca9cc78d9c46a65d1b8ae61f1a37b77cdf5f0a4075d85ed227e0d1784b LICENSE
+SHA256 c936f90edadfd12895c472edc4516dc2189861da0e786f20078b4127d594e3c5 MANIFEST
+SHA256 39ccff97429d0d062d02608140d4dbbd708dd936fde15c4bb2ff05aa2bafa78a META.yml
+SHA256 bb398e5e383b72851b2becf7ca85db6e5b8fcc7dcfaaaf3efebe663e43399f29 Makefile.PL
+SHA256 dec4f472901d82ff6a96358675a9ec1a5de6b73cdeb25808ad5c31e67efe4bf4 README
+SHA256 0eb9d04667dd41759332564027007c0bb6dc774047a3759e7ee99557498e1af0 examples/create_and_print_image.pl
+SHA256 67d139199c03b8bf8447a5a62f0d0b6dc1bd5bf6dbe04de6d21998c577823ed6 inc/Module/Install.pm
+SHA256 8bd506c33fb78f10f6451413e931ca23541fcc4eebe05fcb7c7c9577341223c4 inc/Module/Install/AuthorRequires.pm
+SHA256 1b5430a46a35142ef8914d8c745196fca825defc9dfa7e389299bf294613825e inc/Module/Install/AuthorTests.pm
+SHA256 6ebcc53a161dd5dc0aae69e4704575f2b00181901d768a82e26722a309cfdbe4 inc/Module/Install/Base.pm
+SHA256 d3f8c839d03fd21c197d05362dbb277cd7cadb15da6390d124b61e851f15146e inc/Module/Install/Can.pm
+SHA256 e9e72e18921c10c87bc4ea4c20af83e52015b9f5775d00ac64073042403717ca inc/Module/Install/Fetch.pm
+SHA256 a7a681bf2c9eee58a372cb642ffe42b0301d1200432ba8de9f7791cd1ecc9827 inc/Module/Install/Makefile.pm
+SHA256 aa887fa65a5eb6bbd1805706ce298b3f3cd55b353ecfd37aa7d35ae419331a49 inc/Module/Install/Metadata.pm
+SHA256 53825bc78e4c910b888160bc148c8bc211be58e02b99c8edcbf4854f95faa049 inc/Module/Install/ReadmeFromPod.pm
+SHA256 26b166ff62aacdb55317d1659f160aa4935097eea9810ea980e6d747206b5dc0 inc/Module/Install/Win32.pm
+SHA256 5f73a6851a91ea44e65b924f918743ad6e860620ad7a38a39d0295e0c5652a9f inc/Module/Install/WriteAll.pm
+SHA256 bb49cfcec8fefbd8aeee69af2d91679e774b2aa46a29fe228dc168f274b9e85e t/Data-Commons-Image/01-use.t
+SHA256 5a870b155b7fa98e74fbac8cbced326eba8cbaddac30ad24508f31b2e60424f1 t/Data-Commons-Image/02-version.t
+SHA256 dfd2cc1cb37a587931a8ed3e4b24cdf1cafe93cf71a74e3d0611d49bbc2907c0 t/Data-Commons-Image/03-new.t
+SHA256 5dbd707aa1712f6927489be25102e18ecd62c6714aeafc9be344ac1a60493a8a t/Data-Commons-Image/04-author.t
+SHA256 0795d982575c1e624a0aa39ea9c0ca1492e36de9cfc188e59302d007c8a4892c t/Data-Commons-Image/05-comment.t
+SHA256 c94b534e496a3f30970e644badb36aaa99e24376630267a805d550e2b0280a29 t/Data-Commons-Image/06-dt_created.t
+SHA256 5f2057e66a8bdc8f2eeb25e592bbf1eb8840120df993704b9f8cf1e9c700c39e t/Data-Commons-Image/07-dt_uploaded.t
+SHA256 330ac26b9d75f0fbc11017f6f4e86ce48071d3b98219fb04ab143496e71ba941 t/Data-Commons-Image/08-height.t
+SHA256 b9bdd508ad81ed1e786328910a4e1a1151323ca4f1664622a64a5d9c78ce6ed5 t/Data-Commons-Image/09-id.t
+SHA256 d617bedd510e1f16c343766047233602c2a3bd3c9b36e68be9974cd3625ee864 t/Data-Commons-Image/10-size.t
+SHA256 6b196a6e8ce5722f0ff59f0bbb5dbcaf017956fcdf3bf093291672a8573bb627 t/Data-Commons-Image/11-url.t
+SHA256 27efe18a3959a2e9ea7acb8698c6f0922092ae72c22b5c4dd3fac0523c2d7982 t/Data-Commons-Image/12-url_cb.t
+SHA256 05ea308ef28e3be71d321a5fe705d2ef34c113d965e501fd9156f8c8db31dd00 t/Data-Commons-Image/13-width.t
+SHA256 e0264e00764425e465a271e8587295b11dd92c2c0ec49e3966bbe1e9bc86e701 xt/Data-Commons-Image/01-pod_coverage.t
+SHA256 ff5ec7869849d26ebebb45114fceb3ffb4459fd718980b850d31fa957307d037 xt/Data-Commons-Image/02-pod.t
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBAwAdFiEERTLc1QTxqWhVvPeegmqNLzlXaRcFAmNFwEUACgkQgmqNLzlX
+aRf6UQv/cGQZMxLgYzsq2ddHGXRidQx278g22tpNmjTvkpOPfmO2QX20w059cr2Q
+w4RRRuKrdYmV2t2ghMTmjqpB5+XQwEIP4JanF70gP4Ug3WzRExeTBVdFP0CK7VDz
+UQ0uKDM2AnWMm81rq+RNwk4ywJpBVmo7/67t8+QhxSubE1Q2w7G5cUuxQmGKctr9
+nYm7nq/D5/C+OZ55tAJLDArbq2lSWGWufpHR1rPlRrIBRSGE3JvOfrZ9Qx84YKA2
+vsRhHH60ckl1P1D/ExAq6qG/oKpZVmSR3FPdBHfCd0cwMrsvPrRUNcbzXNid5MEy
+ME4SopHiU1CrdbCH+xOUTZRTJcnVNoYGLysMuoYeXJmW24OoRxXlKIak0xuwXWp9
+9GlZDjU1CuTfZ3l7TRuglpa4M/jHD2P0SjG0+Ff0g7lJpl4eR/kpxCw7wuPnv4cg
+Q/4TTT6ulxUTspmHTN/84/fKZvFJbHIaHL97Ne3CMjFvh7/QA6sRq/6dU2FeuSqn
+1Qk3XdIW
+=P64N
+-----END PGP SIGNATURE-----
