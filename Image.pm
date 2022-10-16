@@ -8,7 +8,7 @@ use Mo::utils qw(check_isa check_length check_required);
 
 extends 'Data::Image';
 
-our $VERSION = 0.04;
+our $VERSION = 0.05;
 
 has commons_name => (
 	is => 'ro',
@@ -336,6 +336,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.04
+0.05
 
 =cut
