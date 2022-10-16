@@ -22,9 +22,9 @@ has dt_uploaded => (
 	is => 'ro',
 );
 
-has license => {
+has license => (
 	is => 'ro',
-};
+);
 
 sub BUILD {
 	my $self = shift;
