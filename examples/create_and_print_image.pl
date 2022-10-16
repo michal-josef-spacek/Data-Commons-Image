@@ -22,6 +22,7 @@ my $obj = Data::Commons::Image->new(
         ),
         'height' => 2730,
         'license' => 'cc-by-sa-4.0',
+        'page_id' => '95648152',
         'size' => 1040304,
         'url' => 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Michal_from_Czechia.jpg',
         'width' => 4096,
@@ -36,6 +37,7 @@ print 'Size: '.$obj->size."\n";
 print 'URL: '.$obj->url."\n";
 print 'Width: '.$obj->width."\n";
 print 'License: '.$obj->license."\n";
+print 'Page id: '.$obj->page_id."\n";
 print 'Date and time the photo was created: '.$obj->dt_created."\n";
 print 'Date and time the photo was uploaded: '.$obj->dt_uploaded."\n";
 
@@ -48,5 +50,6 @@ print 'Date and time the photo was uploaded: '.$obj->dt_uploaded."\n";
 # URL: https://upload.wikimedia.org/wikipedia/commons/a/a4/Michal_from_Czechia.jpg
 # Width: 4096
 # License: cc-by-sa-4.0
+# Page id: 95648152
 # Date and time the photo was created: 2022-01-01T00:00:00
 # Date and time the photo was uploaded: 2022-07-14T00:00:00
