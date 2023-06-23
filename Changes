@@ -1,4 +1,5 @@
 0.06
+ - Add ERRORS section to doc.
  - Move dt_created() to Data::Image.
  - Update copyright years.
  - Update Module::Install to 1.21 version.
