@@ -14,10 +14,6 @@ has commons_name => (
 	is => 'ro',
 );
 
-has dt_created => (
-	is => 'ro',
-);
-
 has dt_uploaded => (
 	is => 'ro',
 );
@@ -36,9 +32,6 @@ sub BUILD {
 	# Check commons_name.
 	check_required($self, 'commons_name');
 	check_length($self, 'commons_name', 255);
-
-	# Check date created.
-	check_isa($self, 'dt_created', 'DateTime');
 
 	# Check date uploaded.
 	check_isa($self, 'dt_uploaded', 'DateTime');

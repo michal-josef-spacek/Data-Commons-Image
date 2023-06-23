@@ -4,10 +4,12 @@ TODO
 2. Inherit some common data object and in this focus to Wikimedia Commons.
 Add some other Wikimedia Commons information like uploader.
 4. Add ERRORS section to doc.
-5. Move dt_created to Data::Image. Not related to Wikimedia Commons.
 6.
 
 Applied
 =======
 3. Inherit common Data::Image and add things related to Wikimedia Commons.
 OK [20221006] skim
+
+5. Move dt_created to Data::Image. Not related to Wikimedia Commons.
+OK [20230623] skim
