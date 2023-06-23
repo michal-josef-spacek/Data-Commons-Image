@@ -1,5 +1,6 @@
 0.06
  - Move dt_created() to Data::Image.
+ - Update copyright years.
  - Update Module::Install to 1.21 version.
  - Update README file.
 
