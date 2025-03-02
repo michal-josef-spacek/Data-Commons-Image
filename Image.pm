@@ -380,7 +380,7 @@ L<http://skim.cz>
 
 =head1 LICENSE AND COPYRIGHT
 
-© 2022-2023 Michal Josef Špaček
+© 2022-2025 Michal Josef Špaček
 
 BSD 2-Clause License
 
