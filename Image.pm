@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Mo qw(build is);
-use Mo::utils qw(check_isa check_length check_number check_required);
+use Mo::utils 0.26 qw(check_isa check_length check_number check_required);
 
 extends 'Data::Image';
 
